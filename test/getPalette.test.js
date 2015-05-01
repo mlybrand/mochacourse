@@ -1,5 +1,5 @@
 var getPalette = require("../lib/getPalette");
-var should = require("chai").should();
+var expect = require("chai").expect;
 
 describe("getPalette", function() {
 
@@ -8,12 +8,12 @@ describe("getPalette", function() {
 		var notArray = function() {
 			getPalette(process.cwd() + "/test/fixtures/config-palette-non-array.json");
 		};
-		should.throw(notArray, /is not an array/);
+		expect(notArray).to.throw(/is not an array/);
 		done();
 	});
 
 	it("should return an array with 3 items by default", function() {
 		var palette = getPalette();
-		palette.should.be.an("array").with.length(3);
+		expect(palette).to.be.an("array").with.length(3);
 	});
 });
