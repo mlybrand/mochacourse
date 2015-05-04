@@ -1,7 +1,7 @@
 var getPalette = require("../lib/getPalette");
 var expect = require("chai").expect;
 
-describe("getPalette", function() {
+describe.skip("getPalette", function() {
 
 	it("should throw an error if the result is not an array", function(done) {
 
