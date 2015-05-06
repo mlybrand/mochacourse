@@ -18,7 +18,7 @@ describe.only("hex2rgb", function() {
 		});
 
 		it("should always return the result of parse", function(done) {
-			sinon.stub(hex2rgb, "parse").returns([0,0,100]);
+			sinon.stub(hex2rgb, "parse").returns([0,0,200]);
 			hex2rgb.convert("#abc", function(err, result) {
 				expect(result).to.deep.equal([0,0,200]);
 
